@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style_final.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="nav">
+                <a href="#introduccion">Introducción</a>
+                <a href="#arqui">Arquitectura</a>
+                <a href="#estrategia">Estrategia</a>
+                <a href="#code">Código</a>
+                <a href="#seguridad">Seguridad</a>
+                <a href="#conclusiones">Conclusiones</a>
+                <a href="#refe">Referencias</a>
+            </nav>
+
+            <main class="title">
+                <h1>Club Cinepolis</h1>
+                <img src="../imgs/Cinepolis_sucursal.png" alt="Sucursal" class="imagen">
+            </main>
+
+            <div class="resumen-box" id="introduccion">
+                <h2>Resumen Situación Actual</h2>
+                <p>Club Cinépolis evoluciona de transacciones anónimas a una <strong>arquitectura basada en datos</strong>. Cada compra es ahora un evento identificable que alimenta sistemas de analítica y marketing, transformando al usuario en un activo clave del negocio.</p>
+            </div>
+
+            <div class="pipeline">
+                <div class="pipe-item">
+                    <div class="pipe-header">1. Identidad (Okta CIC)</div>
+                    <p>Autenticación centralizada en app, web y POS. Reduce fraude y duplicados.</p>
+                </div>
+                <div class="pipe-item">
+                    <div class="pipe-header">2. Operativa (POS)</div>
+                    <p>Registro en tiempo real de ventas en taquilla y dulcería. Punto de entrada de datos.</p>
+                </div>
+                <div class="pipe-item">
+                    <div class="pipe-header">3. Motor de Lealtad</div>
+                    <p>Lógica de puntos (5%/10%), niveles de socio y validación de promociones.</p>
+                </div>
+                <div class="pipe-item">
+                    <div class="pipe-header">4. Base de Datos Central</div>
+                    <p>Almacén de usuarios, transacciones, canjes y reglas de expiración.</p>
+                </div>
+                <div class="pipe-item">
+                    <div class="pipe-header">5. Capa Analítica</div>
+                    <p>Segmentación, predicción de comportamiento y campañas personalizadas.</p>
+                </div>
+            </div>
+
+            <div class="arquitectura" id="arqui">
+                <h1>Arquitectura del Sistema</h1>
+                <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot;&gt;&lt;diagram name=\&quot;Página-1\&quot; id=\&quot;S2W3MU44N-2r5KZolUjB\&quot;&gt;&lt;mxGraphModel dx=\&quot;2553\&quot; dy=\&quot;1823\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;1\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;827\&quot; pageHeight=\&quot;1169\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;&lt;root&gt;&lt;mxCell id=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot;/&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-4\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-1\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-3\&quot; value=\&quot;\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;Array as=\&quot;points\&quot;/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-1\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#446B99,#1E3A8A);strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 46px; color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot; face=&amp;quot;Verdana&amp;quot;&amp;gt;&amp;lt;b style=&amp;quot;&amp;quot;&amp;gt;Cliente Club Cinépolis&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;160\&quot; width=\&quot;760\&quot; x=\&quot;1030\&quot; y=\&quot;30\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-6\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-3\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-5\&quot; value=\&quot;\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-3\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#446B99,#1E3A8A);strokeColor=light-dark(#24435F,#24435F);\&quot; value=\&quot;&amp;lt;span style=&amp;quot;font-size: 30px;&amp;quot;&amp;gt;&amp;lt;b style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;font face=&amp;quot;Verdana&amp;quot; style=&amp;quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot;&amp;gt;Taquillas, Apps o&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt; &amp;lt;/font&amp;gt;Webs&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;170\&quot; width=\&quot;520\&quot; x=\&quot;1150\&quot; y=\&quot;210\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-8\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-5\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-7\&quot; value=\&quot;\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-5\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#197286,#1E3A8A);strokeColor=light-dark(#24435F,#24435F);\&quot; value=\&quot;&amp;lt;font face=&amp;quot;Verdana&amp;quot; style=&amp;quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 30px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Registro de la compra&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/font&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;170\&quot; width=\&quot;520\&quot; x=\&quot;1150\&quot; y=\&quot;410\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-11\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-7\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-9\&quot; value=\&quot;\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-7\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#197286,#1E3A8A);strokeColor=light-dark(#24435F,#24435F);\&quot; value=\&quot;&amp;lt;font face=&amp;quot;Verdana&amp;quot; style=&amp;quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 30px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Validación de la membresia&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/font&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;170\&quot; width=\&quot;520\&quot; x=\&quot;1150\&quot; y=\&quot;610\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-15\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-9\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-12\&quot; value=\&quot;\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-9\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#2563EB,#2563EB);strokeColor=light-dark(#24435F,#24435F);\&quot; value=\&quot;&amp;lt;font face=&amp;quot;Verdana&amp;quot; style=&amp;quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 30px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Pipeline para calcular las reglas de la membresia&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/font&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;170\&quot; width=\&quot;520\&quot; x=\&quot;1150\&quot; y=\&quot;807\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-16\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-12\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-13\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-12\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#2563EB,#2563EB);strokeColor=light-dark(#24435F,#24435F);\&quot; value=\&quot;&amp;lt;font face=&amp;quot;Verdana&amp;quot; style=&amp;quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 30px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Base de datos central&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/font&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;140\&quot; width=\&quot;520\&quot; x=\&quot;1150\&quot; y=\&quot;1000\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-18\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-13\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-1\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;&lt;Array as=\&quot;points\&quot;&gt;&lt;mxPoint x=\&quot;780\&quot; y=\&quot;1280\&quot;/&gt;&lt;mxPoint x=\&quot;780\&quot; y=\&quot;110\&quot;/&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-13\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#2563EB,#2563EB);strokeColor=light-dark(#24435F,#24435F);\&quot; value=\&quot;&amp;lt;font face=&amp;quot;Verdana&amp;quot; style=&amp;quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 30px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Servicio de retribución&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/font&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;140\&quot; width=\&quot;520\&quot; x=\&quot;860\&quot; y=\&quot;1210\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-14\&quot; parent=\&quot;1\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#2563EB,#2563EB);strokeColor=light-dark(#24435F,#24435F);\&quot; value=\&quot;&amp;lt;font face=&amp;quot;Verdana&amp;quot; style=&amp;quot;color: light-dark(rgb(255, 255, 255), rgb(255, 255, 255));&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 30px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Pipeline de analítica de datos&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/font&amp;gt;\&quot; vertex=\&quot;1\&quot;&gt;&lt;mxGeometry height=\&quot;140\&quot; width=\&quot;520\&quot; x=\&quot;1470\&quot; y=\&quot;1210\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;mxCell id=\&quot;h45voKH-1ejLCZbNmDw3-17\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;h45voKH-1ejLCZbNmDw3-12\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=light-dark(#FFFFFF,#FFFFFF);\&quot; target=\&quot;h45voKH-1ejLCZbNmDw3-14\&quot;&gt;&lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;/&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;&lt;/diagram&gt;&lt;/mxfile&gt;&quot;,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;page&quot;:0}"></div>
+                <script type="text/javascript" src="https://app.diagrams.net/js/viewer-static.min.js"></script>
+            </div>
+
+            <div class="estrategia-container" id="estrategia">
+                <div class="estrategia-header">
+                    <h2>Estrategia Detrás del Sistema</h2>
+                    <p>El diseño está optimizado para transformar el comportamiento del usuario mediante gamificación y control financiero.</p>
+                </div>
+
+                <div class="estrategia-grid">
+                    <div class="card-vertical">
+                        <div class="icon">📈</div>
+                        <h3>Frecuencia</h3>
+                        <p>Modelo semestral por niveles diseñado para incrementar las visitas constantes al cine.</p>
+                    </div>
+
+                    <div class="card-vertical">
+                        <div class="icon">💰</div>
+                        <h3>Gasto Promedio</h3>
+                        <p>A mayor acumulación de puntos, mayor es el incentivo de consumo en dulcería y taquilla.</p>
+                    </div>
+
+                    <div class="card-vertical">
+                        <div class="icon">📊</div>
+                        <h3>Big Data</h3>
+                        <p>Generación masiva de datos de comportamiento para toma de decisiones estratégicas.</p>
+                    </div>
+
+                    <div class="card-vertical">
+                        <div class="icon">🎮</div>
+                        <h3>Gamificación</h3>
+                        <p>Sistema de niveles (Fan a Súper Fan) que impulsa al usuario a "subir de categoría".</p>
+                    </div>
+
+                    <div class="card-vertical">
+                        <div class="icon">🕒</div>
+                        <h3>Pasivos</h3>
+                        <p>El vencimiento de puntos reduce pasivos financieros y genera picos de consumo a fin de año.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="code">
+                <div class="code-section">
+                    <h1>Código</h1>
+                <div class="code-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="file-name">logic_test.py</span>
+                </div>
+                
+                <div class="code-container">
+                    <div class="code-block">
+                        <div class="block-title">Lógica del Sistema</div>
+                        <pre><code>
+           from datetime import datetime
+
+            from datetime import datetime
+
+            class Usuario:
+                def __init__(self, id_usuario, nombre):
+                    self.id = id_usuario
+                    self.nombre = nombre
+                    self.visitas = 0
+                    self.puntos = 0
+                    self.nivel = "Fan"
+                    self.historial = []
+
+            # Actualizar nivel según visitas
+            def actualizar_nivel(usuario):
+                if usuario.visitas >= 24:
+                    usuario.nivel = "Super Fanatico"
+                elif usuario.visitas >= 12:
+                    usuario.nivel = "Fanatico"
+                else:
+                    usuario.nivel = "Fan"
+
+            # Calcular puntos
+            def calcular_puntos(usuario, monto):
+                if usuario.nivel == "Fan":
+                    tasa = 0.05
+                else:
+                    tasa = 0.10
+                return monto * tasa
+
+            # Registrar transacción
+            def registrar_compra(usuario, monto):
+                fecha = datetime.now().date()
+
+                # Validar una visita por día
+                if not any(t["fecha"] == fecha for t in usuario.historial):
+                    usuario.visitas += 1
+
+                # Actualizar nivel
+                actualizar_nivel(usuario)
+
+                # Calcular puntos
+                puntos_ganados = calcular_puntos(usuario, monto)
+                usuario.puntos += puntos_ganados
+
+                # Guardar transacción
+                usuario.historial.append({
+                    "fecha": fecha,
+                    "monto": monto,
+                    "puntos": puntos_ganados
+                })
+
+                print(f"\nUsuario: {usuario.nombre}")
+                print(f"Nivel: {usuario.nivel}")
+                print(f"Compra: Q{monto}")
+                print(f"Puntos ganados: {puntos_ganados}")
+                print(f"Total puntos: {usuario.puntos}")
+
+            #Expiración de puntos
+            def expirar_puntos(usuario):
+                usuario.puntos = 0
+
+            #Canje de recompensas
+            def canjear(usuario, costo):
+                if usuario.puntos >= costo:
+                    usuario.puntos -= costo
+                    print("Canje exitoso")
+                else:
+                    print("Puntos insuficientes")
+
+            #Promociones
+            def aplicar_promocion(dia):
+                if dia == "martes":
+                    return "2x1"
+            
+            </code></pre>
+                    </div>
+
+                    <div class="output-block">
+                        <div class="block-title">Consola de Salida (Output)</div>
+                        <pre class="output-text"><code>Promoción aplicada: 2x1
+Promoción aplicada: 2x1
+Total a pagar: Q50
+
+Usuario: Dhidel
+Nivel: Fan
+Compra: Q50
+Puntos ganados: 2.5
+Total puntos: 2.5
+
+Intentando canje...
+Puntos insuficientes
+
+Estado final del usuario:
+Nivel: Fan
+Puntos: 2.5
+Visitas: 1
+
+Expirando puntos...
+Puntos después de expirar: 0
+        </code></pre>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="seguridad-section" id="seguridad">
+                <h2>Seguridad</h2>
+                <div class="seguridad-actual">
+                    <h2>Sistema de Seguridad Actual</h2>
+                    <div class="seguridad-grid">
+                        <div class="seguridad-item">
+                            <span class="status-dot"></span>
+                            <p><strong>Identidad Centralizada:</strong> Uso de Okta para separar la operación del cine de la gestión crítica de usuarios.</p>
+                        </div>
+                        <div class="seguridad-item">
+                            <span class="status-dot"></span>
+                            <p><strong>Comunicaciones Cifradas:</strong> Túnel seguro entre puntos de venta (Vista Cinema) y la nube.</p>
+                        </div>
+                        <div class="seguridad-item">
+                            <span class="status-dot"></span>
+                            <p><strong>Prevención de Fraude:</strong> Motor de reglas estáticas para evitar duplicación de puntos y visitas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mejora-simple">
+                    <h3>Consejo de Mejora: Análisis Dinámico</h3>
+                    <p>Implementar un sistema de <strong>Machine Learning</strong> que aprenda los hábitos del socio para detectar anomalías (geolocalización o picos de gasto) en tiempo real.</p>
+                </div>
+            </div>
+            
+            <div class="conclusiones-section" id="conclusiones">
+                <div class="conclusiones-header">
+                    <h2>Conclusiones</h2>
+                </div>
+                <div class="conclusiones-grid">
+                    <div class="conclusion-card">
+                        <h3>1. El dato es el activo principal</h3>
+                        <p>El valor real no reside en los puntos acumulados, sino en la <strong>información estratégica</strong> generada:</p>
+                        <ul>
+                            <li>Hábitos de consumo.</li>
+                            <li>Frecuencia de visita.</li>
+                            <li>Preferencias de usuario.</li>
+                        </ul>
+                    </div>
+                    <div class="conclusion-card">
+                        <h3>2. Arquitectura orientada a eventos</h3>
+                        <p>Cada compra es un evento crítico que desencadena acciones en <strong>tiempo real</strong>:</p>
+                        <ul>
+                            <li>Procesamiento inmediato.</li>
+                            <li>Sincronización de sistemas.</li>
+                            <li>Alimentación de analítica.</li>
+                        </ul>
+                    </div>
+                    <div class="conclusion-card">
+                        <h3>3. Gamificación como estrategia</h3>
+                        <p>El sistema de niveles es la herramienta clave para el <strong>crecimiento del negocio</strong>:</p>
+                        <ul>
+                            <li>Comportamiento recurrente.</li>
+                            <li>Generación de engagement.</li>
+                            <li>Aumento de retención.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="referencias-section" id="refe">
+                <div class="referencias-header">
+                    <h2>Fuentes y Referencias</h2>
+                </div>
+                <div class="referencias-grid">
+                    <a href="https://cinepolis.com/" class="ref-card" target="_blank">
+                        <span class="ref-category">Oficial</span>
+                        <h4>Cinépolis</h4>
+                        <p>Portal principal de Club Cinépolis.</p>
+                    </a>
+                    <a href="https://formatos.cinepolis.com.gt/club-cinepolis" class="ref-card" target="_blank">
+                        <span class="ref-category">Legal</span>
+                        <h4>Términos y Condiciones</h4>
+                        <p>Bases legales del programa en Guatemala.</p>
+                    </a>
+                    <a href="https://auth0.com/case-studies/cinepolis" class="ref-card" target="_blank">
+                        <span class="ref-category">Seguridad</span>
+                        <h4>Okta CIC / Auth0</h4>
+                        <p>Caso de estudio sobre gestión de identidad.</p>
+                    </a>
+                    <a href="https://vista.co/" class="ref-card" target="_blank">
+                        <span class="ref-category">Software</span>
+                        <h4>Vista Cinema</h4>
+                        <p>Soluciones operativas para exhibición.</p>
+                    </a>
+                    <a href="https://www.movio.co/" class="ref-card" target="_blank">
+                        <span class="ref-category">Data</span>
+                        <h4>Movio Analytics</h4>
+                        <p>Especialistas en análisis de audiencias.</p>
+                    </a>
+                    <a href="https://www.salesforce.com/mx/" class="ref-card" target="_blank">
+                        <span class="ref-category">CRM</span>
+                        <h4>Salesforce</h4>
+                        <p>Gestión de relaciones con el cliente.</p>
+                    </a>
+                </div>
+            </div>
+
+            <footer class="foot">
+                <a href="https://dbc-f8df9fc9-6c6e.cloud.databricks.com/editor/notebooks/2767988043977617?o=7474652636853247#command/6158858239303071" target="_blank">Notebook</a>
+                <a href="https://github.com/Dhidel/Introducci-n_a_datos_2026" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/dhidel-osorio-ar%C3%A9valo-39a279361/" target="_blank">Contacto</a>
+            </footer>
+        </div>
+    </body>
+</html>
